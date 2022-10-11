@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"> 
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Skeleton Screen Loading Animation</title>
+  <style media="screen">
+  </style>
+  <link href="style.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+  <div class="user-card skeleton">
+    <div class="user-cover">
+
+      <img class="user-avatar" src="
+        images/avatar.webp"/>
+    </div>
+    <div class="user-details">
+      <div class="user-name hide-text">Noah Van Puymbroeck</div>
+      <div class="user-email hide-text">Web Developer</div>
+      <div class="user-text hide-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Lorem ipsum dolor sit amet, consectetur. </div>
+    </div>
+    <button class="contact-user hide-text">CONTACT</button>
+  </div>
+  <script type="text/javascript">
+const $el = document.querySelector(".user-card");
+setTimeout(() => {
+  $el.classList.remove("skeleton");
+  $el
+    .querySelectorAll(".hide-text")
+    .forEach((el) => el.classList.remove("hide-text"));
+}, 3000);
+  </script>
+</body>
+</html>
